@@ -1,0 +1,9 @@
+ARG BASE_IMAGE=gcr.io/distroless/static:nonroot
+FROM ${BASE_IMAGE}
+WORKDIR /
+
+COPY manager /manager
+
+USER 65532:65532
+
+ENTRYPOINT ["/manager"]

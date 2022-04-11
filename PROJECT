@@ -1,0 +1,25 @@
+domain: tinkerbell.org
+layout:
+- go.kubebuilder.io/v3
+projectName: pbnj
+repo: github.com/tinkerbell/pbnj
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tinkerbell.org
+  group: bmc
+  kind: MachineState
+  path: github.com/tinkerbell/pbnj/pkg/apis/bmc/v1alpha1
+  version: v1beta1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tinkerbell.org
+  group: bmc
+  kind: PowerCycleJob
+  path: github.com/tinkerbell/pbnj/pkg/apis/bmc/v1alpha1
+  version: v1beta1
+version: "3"
